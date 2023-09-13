@@ -1,5 +1,7 @@
 start:
-	docker compose -f airflow/docker-compose.yaml up --detach
+	docker compose -f airflow/docker-compose-airflow.yaml up --detach
+	docker compose -f database/docker-compose-db.yaml up --detach
 
 stop: 
-	docker compose down
+	docker compose -f airflow/docker-compose-airflow.yaml down
+	docker compose -f database/docker-compose-db.yaml up down
