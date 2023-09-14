@@ -4,4 +4,4 @@ start:
 
 stop: 
 	docker compose -f airflow/docker-compose-airflow.yaml down
-	docker compose -f database/docker-compose-db.yaml up down
+	docker compose -f database/docker-compose-db.yaml down
